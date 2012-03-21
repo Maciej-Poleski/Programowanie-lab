@@ -11,6 +11,7 @@ public class Useless {
 			try {
 				for (Class<?> cc : constructor.getParameterTypes()) {
 					args.add(null);
+					
 				}
 				return (T) constructor.newInstance(args.toArray());
 			} catch (Exception e) {
@@ -21,6 +22,6 @@ public class Useless {
 	}
 
 	public static void main(String... args) {
-		System.out.println(newInstance(Integer.class));
+		System.out.println(newInstance(int.class));
 	}
 }
